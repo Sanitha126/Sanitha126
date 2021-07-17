@@ -1,0 +1,28 @@
+import java.util.*;
+class linkedlist
+{
+public static void main(String args[])
+{
+LinkedList<Integer> a=new LinkedList<Integer>();
+Scanner sc=new Scanner (System.in);
+System.out.println("enter no of elements");
+int n=sc.nextInt();
+System.out.println("enter values");
+for(int i=0;i<n;i++)
+a.add(sc.nextInt());
+for(Integer i:a) 
+System.out.print(i+"-->");
+System.out.println(" enter value to delete");
+int x=sc.nextInt();
+if(a.contains(x))
+{
+int b=a.indexOf(x);
+a.remove(b);
+System.out.println("list after deleting element");
+for(Integer i:a)
+System.out.print(i+"-->");
+}
+else
+System.out.println("element not found");
+}
+}
