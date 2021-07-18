@@ -1,0 +1,45 @@
+import java.util.*;
+class linkmenu
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner (System.in);
+LinkedList<Integer> a=new LinkedList<Integer>();
+int ch;
+do
+{
+System.out.println("1.begininsert  2.endinsert 3.positioninsert 4.begindelete 5.enddelete 6.positiondelete 7.display 8.exit\n..Enter your choice ");
+ch=sc.nextInt();
+int n;
+switch(ch)
+{
+case 1:System.out.print(" enter n value ");
+       n=sc.nextInt();
+       a.addFirst(n);
+       break;
+case 2:System.out.print(" enter n value ");
+       n=sc.nextInt();
+       a.addLast(n);
+       break;
+case 3:System.out.print("enter index value to add element");
+       int m=sc.nextInt();
+       System.out.print("enter value to add");
+       n=sc.nextInt();
+       a.add(m,n);
+       break;
+case 4:a.removeFirst();
+       break;
+case 5:a.removeLast();
+       break;
+case 6:System.out.print("enter index value to delete");
+       n=sc.nextInt();
+       a.remove(n);
+       break;
+case 7:System.out.println(a);
+       break;
+default:System.out.println("invalid choice");
+}
+
+}while(ch<8);
+}
+}
