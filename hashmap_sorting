@@ -1,0 +1,24 @@
+import java.util.*;
+class hashmap
+{
+public static void main(String args[])
+{
+HashMap<Integer,String> x=new HashMap<Integer,String>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n values");
+int n=sc.nextInt();
+int key;
+String value;
+System.out.println("enter input");
+for(int i=0;i<n;i++)
+{
+key=sc.nextInt();
+value=sc.next();
+x.put(key,value);
+} 
+TreeMap<Integer,String> t=new TreeMap<Integer,String>(x);
+System.out.println("output :");
+for(Map.Entry<Integer,String> i:t.entrySet())
+System.out.println(i+" ");
+}
+}
