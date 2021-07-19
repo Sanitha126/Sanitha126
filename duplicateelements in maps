@@ -1,0 +1,28 @@
+import java.util.*;
+class duplicatemap
+{
+public static void main(String args[])
+{
+HashMap<Integer,Integer> x=new HashMap<Integer,Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter array size");
+int n=sc.nextInt();
+int key=0;
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+for(int i=0;i<n;i++)
+{ 
+key=a[i];
+if(x.containsKey(key))
+x.put(key,x.get(key)+1);
+else
+x.put(key,1);
+}
+for(Map.Entry<Integer,Integer> i: x.entrySet())
+{
+if(i.get(key)>1)
+System.out.print(i+" ");
+}
+}
+}
