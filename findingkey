@@ -1,0 +1,25 @@
+import java.util.*;
+class findkey
+{
+public static void main(String args[])
+{
+HashMap<String,Integer> x=new HashMap<String,Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n value");
+int n=sc.nextInt();
+int value;
+String key;
+for(int i=0;i<n;i++)
+{
+key=sc.next();
+value=sc.nextInt();
+x.put(key,value);
+}
+System.out.println("enter key to search");
+String s=sc.next();
+if(x.containsKey(s))
+System.out.println(x.get(s));
+else 
+System.out.println("-1");
+}
+}
