@@ -1,0 +1,26 @@
+import java.util.*;
+class phonebook
+{
+public static void main(String args[])
+{
+HashMap<String,Integer>x=new HashMap<String,Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter size");
+int n=sc.nextInt();
+for(int i=0;i<n;i++)
+{
+String key=sc.next();
+int value=sc.nextInt();
+x.put(key,value);
+}
+for(int i=0;i<n;i++)
+{
+System.out.println("enter key");
+String k=sc.next();
+if(x.containsKey(k))
+System.out.println(k+"="+x.get(k));
+else
+System.out.println("not found");
+}
+}
+}
