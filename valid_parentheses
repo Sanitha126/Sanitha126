@@ -1,0 +1,29 @@
+import java.util.*;
+class stack
+{
+public static void main(String args[])
+{
+Stack<Character>x=new Stack<Character>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter parentheses");
+String s=sc.next();
+char ch[]=s.toCharArray();
+char t;
+for(char i:ch)
+{ 
+t=x.empty()?'@':x.peek();
+if(t=='('&&i==')')
+x.pop();
+else if(t=='{'&&i=='}')
+x.pop();
+else if(t=='['&&i==']')
+x.pop(); 
+else 
+x.push(i);
+}
+if(x.empty())
+System.out.println("valid");
+else
+System.out.println("invalid");
+}
+}
