@@ -1,0 +1,33 @@
+import java.util.*;
+class hashmap2
+{
+public static void main(String args[])
+{
+HashMap<Integer,Integer>x=new HashMap<Integer,Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter array size");
+int n=sc.nextInt();
+int a[]=new int[n];
+System.out.println("enter array elements");
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+int count=0;
+int flag=0;
+for(int i=0;i<n;i++)
+{
+if(a[i]%5==0)
+count++;
+}
+for(int i=0;i<n;i++)
+{
+ if(a[i]%3==0)
+flag++;
+}
+x.put(5,count);
+x.put(3,flag);
+for(Map.Entry<Integer,Integer>i:x.entrySet())
+{
+System.out.println(i.getKey()+"="+i.getValue());
+}
+}
+}
