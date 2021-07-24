@@ -1,0 +1,17 @@
+import java.util.*;
+class stack2
+{
+public static void main(String args[])
+{
+Stack<Character>x=new Stack<Character>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter string");
+String s=sc.next();
+char ch[]=s.toCharArray();
+int n=ch.length;
+for(int i=0;i<n;i++)
+x.push(ch[i]);
+for(int i=n-1;i>=0;i--)
+System.out.print(x.pop());
+}
+}
