@@ -1,0 +1,34 @@
+import java.util.*;
+class stackmin
+{
+public static void main(String args[])
+{
+Stack<Integer>x=new Stack<Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n value");
+int n=sc.nextInt();
+System.out.println("enter stack elements");
+for(int i=0;i<n;i++)
+x.push(sc.nextInt());
+int min=0;
+try
+{
+for(int i=0;i<n;i++)
+{
+ min=x.pop();
+if(x.peek()<min)
+min=x.peek();
+else
+{
+x.pop();
+x.push(min);
+}
+}
+}
+catch(Exception e)
+{
+System.out.println(".....");
+}
+System.out.println("Minmum element in stack:  "+min);
+}
+}
